@@ -1,4 +1,4 @@
-const BASE = "/api";
+const BASE = process.env.VITE_API_URL || "https://sale-tracker-production-7059.up.railway.app";
 
 async function request(path, options = {}) {
   const res = await fetch(`${BASE}${path}`, {
